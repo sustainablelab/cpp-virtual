@@ -115,7 +115,7 @@ int main()
     LOG(MAIN, "p->print()\n");  p->print(); NL;                 // my_base::print()
     LOG(MAIN, "p->print2()\n"); p->print2(); NL;                // my_base::print2()
     LOG(MAIN, "p->print3()\n"); p->print3(); NL;                // my_base::print3()
-                                                                //
+
     printf("\nWhen I go to POINT at the derived type, only the virtual is overriden:\n\n");
 
     p = &dDd; LOG(MAIN, "p = &dDd;\n");

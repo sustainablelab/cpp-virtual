@@ -1,6 +1,5 @@
 #ifndef __PRETTY_H__
 #define __PRETTY_H__
-#endif // __PRETTY_H__
 
 #define LOOK_HERE() printf(" <----- LOOK HERE")
 #define NL printf("\n")
@@ -8,7 +7,7 @@ enum Depth { MAIN=0, CALL=1 };
 #define LOG(depth, ...) log(__func__, depth, __VA_ARGS__);
 void log(const char *func, Depth depth, const char *fmt, ...)
 {
-    /* =====[ Prepend "└─ " to __func__ ]===== */
+    /* =====[ Prepend "-- " to __func__ ]===== */
     /* =====[ Append  ":()" to __func__ ]===== */
     char *cat;
     {
@@ -39,3 +38,4 @@ void log(const char *func, Depth depth, const char *fmt, ...)
     va_end(args);
 }
 
+#endif // __PRETTY_H__
